@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Proposal - Islamabad Rehab Center (IRC) | Abdul Mughees</title>
+    <!-- Google Font: Outfit & Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:300,400,600,700|Inter:300,400,600&display=swap">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+        h1, h2, h3, h4, h5, h6, .display-4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: #111;
+        }
+        .page {
+            padding: 40px;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #ddd;
+        }
+        .cover-page {
+            text-align: center;
+            padding: 120px 40px;
+            border: 10px double #FF7A00;
+            margin-bottom: 60px;
+            border-radius: 8px;
+        }
+        .section-title {
+            border-bottom: 3px solid #FF7A00;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            letter-spacing: 1.2px;
+            color: #222;
+        }
+        .sub-section-title {
+            margin-top: 25px;
+            margin-bottom: 12px;
+            color: #FF7A00;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .page {
+                border-bottom: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body class="p-3 p-md-5">
+
+    <!-- Print Banner -->
+    <div class="container-fluid no-print mb-4 bg-light p-3 border rounded d-flex justify-content-between align-items-center">
+        <div>
+            <strong>Project Proposal Portal:</strong> You can download this document as a PDF by clicking "Save as PDF".
+        </div>
+        <div>
+            <button onclick="window.print();" class="btn btn-warning text-white fw-bold px-4 rounded-pill shadow-sm" style="background-color: #FF7A00 !important; border-color: #FF7A00 !important;">
+                <i class="bi bi-file-pdf"></i> Save / Export as PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= COVER PAGE ================= -->
+    <div class="container cover-page page">
+        <h5 class="text-uppercase tracking-wider text-muted mb-4">PROJECT PROPOSAL</h5>
+        <hr class="w-100 border-dark mb-5">
+        <h1 class="display-4 fw-bold mt-3 text-dark">Islamabad Rehab Center (IRC)</h1>
+        <h3 class="text-secondary mb-5">Universal Dynamic Web Portal & RBAC System</h3>
+        <div class="my-5 py-3">
+            <h5 class="fw-bold mb-3 text-dark">Submitted by</h5>
+            <h4 class="mb-1 text-dark"><strong>Abdul Mughees</strong></h4>
+            <p class="text-secondary">Department of Business Administration</p>
+            <p class="text-secondary">Session 2022-2026</p>
+        </div>
+        <div class="my-5">
+            <h5 class="fw-bold mb-3 text-dark">Supervised by</h5>
+            <h4 class="text-dark"><strong>Mr. Umair Waqas</strong></h4>
+        </div>
+        <div class="mt-5 pt-4">
+            <img src="logo.png" alt="IRC Logo" style="max-height: 80px;" class="mb-3 rounded">
+            <h5 class="text-uppercase fw-bold text-dark mb-1">Department of Business Administration</h5>
+            <h4 class="text-dark"><strong>University of Sahiwal, Sahiwal</strong></h4>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SECTION 1 ================= -->
+    <div class="container page">
+        <h2 class="section-title">1. Introduction & Project Background</h2>
+        <p>
+            Rehabilitation and behavioral healthcare facilities operate in a highly sensitive domain where patient privacy, data integrity, and strict clinical workflows are paramount. Currently, many rehabilitation centers in Pakistan rely on fragmented manual record-keeping systems or non-permissioned digital sheets. This lack of structure leads to administrative errors, compliance risks, and communication gaps between clinicians, case managers, and patients.
+        </p>
+        <p>
+            The proposed project, <strong>Islamabad Rehab Center (IRC) Portal</strong>, is a secure, lightweight, and dynamic web application designed to centralize and automate clinical administrative workflows. The portal provides dedicated operational workspaces for three key user classes: administrative officers, clinical directors/doctors, and recovering patients.
+        </p>
+
+        <h3 class="sub-section-title">1.1 Project Purpose</h3>
+        <p>
+            The main purpose of the portal is to ensure that healthcare records—including initial patient intake documentation, daily medical detoxification progress, psychological therapy assessments, and clinician feedback logs—are securely processed and accessible under a strict **Role-Based Access Control (RBAC)** security model. By moving operations online, the facility can eliminate paper trail losses and provide families with secure updates on patient recovery.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SECTION 2 ================= -->
+    <div class="container page">
+        <h2 class="section-title">2. Problem Statement</h2>
+        <p>
+            Traditional offline medical workflows at substance rehabilitation clinics encounter several operational challenges:
+        </p>
+        <ol class="mb-4">
+            <li class="mb-2">
+                <strong>Data Privacy Risks:</strong> Patient diagnosis notes, detoxification medication regimens, and therapy logs are highly confidential. Paper-based filing runs a high risk of unauthorized exposure.
+            </li>
+            <li class="mb-2">
+                <strong>Communication Overhead:</strong> Outpatients and family sponsors lack direct digital access to monitor recovery stages, check appointment intervals, or securely signal emotional triggers to clinicians.
+            </li>
+            <li class="mb-2">
+                <strong>Static Software Rigidity:</strong> Existing commercial management systems use hardcoded configuration files. Adding a new script page, registering custom security roles, or changing menu navigation requires code alteration by external developers.
+            </li>
+            <li class="mb-2">
+                <strong>Vulnerabilities to Exploitation:</strong> Standard raw SQL query structures are prone to SQL injection inputs and Cross-Site Scripting (XSS) actions inside clinic logs.
+            </li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SECTION 3 ================= -->
+    <div class="container page">
+        <h2 class="section-title">3. Proposed Solution & Key Features</h2>
+        <p>
+            To address these issues, the <strong>Islamabad Rehab Center (IRC) Portal</strong> employs a 100% database-driven structure where security configurations, user permissions, active pages, and sidebar menus are resolved dynamically in MySQL. 
+        </p>
+
+        <h3 class="sub-section-title">3.1 Core System Modules</h3>
+        <ul>
+            <li class="mb-2">
+                <strong>100% Dynamic RBAC Engine:</strong> All sidebar links and script execution paths are validated against a <code>role_access</code> table mapping. If a user's role is not authorized for a requested page ID, execution halts immediately and renders a 403 Forbidden template.
+            </li>
+            <li class="mb-2">
+                <strong>Clinician Workspace:</strong> Allows doctors, clinical directors, and counselors to register new patients, schedule therapy logs, write diagnostic assessment notes, track caseload allocations, and review analytics.
+            </li>
+            <li class="mb-2">
+                <strong>Patient Self-Service Portal:</strong> Enables patients to view their current recovery phase (Intake, Detox, Rehab, Outpatient, Discharged), log daily mood/trigger status, communicate issues via support tickets, and export their clinical recovery PDF.
+            </li>
+            <li class="mb-2">
+                <strong>Admin Branding Controller:</strong> Allows super administrators to update system logos, center names, and footer details directly from a web configuration widget without modifying PHP source code.
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SECTION 4 ================= -->
+    <div class="container page">
+        <h2 class="section-title">4. Technology Stack & Feasibility</h2>
+        <p>
+            The project leverages open-source development tools to ensure lightweight execution and ease of hosting:
+        </p>
+        <table class="table table-bordered bg-white">
+            <thead class="table-light">
+                <tr><th>Component</th><th>Technology Stack</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Frontend Interface</strong></td><td>HTML5, Vanilla CSS3, Bootstrap 5.3</td><td>Clean, responsive layouts and premium orange theme branding.</td></tr>
+                <tr><td><strong>Visual Widgets</strong></td><td>Chart.js (via CDN)</td><td>Telemetry dashboards showing patient distribution phases.</td></tr>
+                <tr><td><strong>Backend Language</strong></td><td>Core PHP 8.2</td><td>Server-side request processing and session security.</td></tr>
+                <tr><td><strong>Database Adapter</strong></td><td>PDO (PHP Data Objects)</td><td>Ensures parameterized prepared statements to neutralize SQL Injection.</td></tr>
+                <tr><td><strong>Database Engine</strong></td><td>MySQL / MariaDB</td><td>Stores structured users, patients, therapy logs, and settings.</td></tr>
+                <tr><td><strong>Local Host Server</strong></td><td>XAMPP (Apache, MySQL)</td><td>Local server hosting environment.</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="sub-section-title">4.1 Feasibility Evaluation</h3>
+        <ul>
+            <li class="mb-2">
+                <strong>Technical:</strong> Core PHP and MySQL are highly mature, stable, and well-documented. Running the application under XAMPP ensures straightforward deployment.
+            </li>
+            <li class="mb-2">
+                <strong>Operational:</strong> Distinct layouts accommodate the specific daily workflows of intake counselors, therapists, and administrative supervisors.
+            </li>
+            <li class="mb-2">
+                <strong>Economic:</strong> Utilizing free open-source software structures eliminates licensing expenditures for the rehabilitation center.
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= SECTION 5 ================= -->
+    <div class="container page">
+        <h2 class="section-title">5. Project Schedule & Milestones</h2>
+        <p>
+            The development schedule spans a five-week timeline divided into core milestones:
+        </p>
+        <div class="p-3 border rounded bg-light mb-4">
+            <pre class="mb-0">
+MILESTONE 1: Relational Schema & Seeding   [Week 1] (Completed)
+MILESTONE 2: PDO Connectors & Security     [Week 2] (Completed)
+MILESTONE 3: Layouts & Sidebar Recursion   [Week 3] (Completed)
+MILESTONE 4: Portal Actions & Dashboards   [Week 4] (Completed)
+MILESTONE 5: Clinical Reports & Testing    [Week 5] (Completed)
+            </pre>
+        </div>
+        <p>
+            An automated integration test suite has been built to verify dynamic page blocking, incorrect password rejection, and user role updates, ensuring zero operational regression before deployment.
+        </p>
+    </div>
+
+    <!-- Automatically Trigger Print Dialog -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
