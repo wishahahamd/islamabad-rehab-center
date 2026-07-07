@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presentation - Islamabad Rehab Center (IRC) | Abdul Mughees</title>
+    <!-- Google Font: Outfit & Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:300,400,600,700|Inter:300,400,600&display=swap">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0A192F;
+            --heading-color: #FFD700;
+            --text-color: #FFFFFF;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 215, 0, 0.25);
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+        h1, h2, h3, h4, h5, .slide-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: var(--heading-color) !important;
+        }
+        .slide-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            position: relative;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            max-width: 1100px;
+            animation: fadeEffect 0.5s ease-in-out forwards;
+            position: relative;
+            z-index: 1;
+            box-sizing: border-box;
+            border-radius: 12px;
+            overflow: hidden;
+            padding: 50px;
+        }
+        .slide.active {
+            display: block;
+        }
+        .svg-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .slide-title {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            border-bottom: 3px solid var(--heading-color);
+            padding-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .cover-slide {
+            text-align: center;
+            border: 8px double var(--heading-color);
+        }
+        .cover-title {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+        }
+        .cover-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-color) !important;
+            margin-bottom: 50px;
+        }
+        .bullet-point {
+            font-size: 1.35rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+            color: var(--text-color) !important;
+        }
+        .bullet-point::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--heading-color);
+        }
+        .custom-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            color: var(--text-color) !important;
+        }
+        .footer-controls {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .control-btn {
+            background: transparent;
+            border: 2px solid var(--heading-color);
+            color: var(--heading-color);
+            padding: 8px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .control-btn:hover {
+            background: var(--heading-color);
+            color: var(--bg-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+        }
+        .slide-number {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+        @media print {
+            .no-print, .footer-controls {
+                display: none !important;
+            }
+            html, body {
+                background-color: #0A192F !important;
+                color: #FFFFFF !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                height: auto !important;
+                overflow: visible !important;
+            }
+            .slide-container {
+                display: block !important;
+                height: auto !important;
+                overflow: visible !important;
+                padding: 0 !important;
+                background-color: #0A192F !important;
+            }
+            .slide {
+                display: block !important;
+                page-break-after: always;
+                height: 100vh !important;
+                box-sizing: border-box;
+                padding: 80px !important;
+                background-color: #0A192F !important;
+                color: #FFFFFF !important;
+                border-radius: 0;
+            }
+            h1, h2, h3, h4, h5, .slide-title {
+                color: #FFD700 !important;
+                border-bottom-color: #FFD700 !important;
+            }
+            .cover-title {
+                color: #FFD700 !important;
+            }
+            .cover-subtitle {
+                color: #FFFFFF !important;
+            }
+            .cover-slide h3 {
+                color: #FFFFFF !important;
+            }
+            .cover-slide {
+                border-color: #FFD700 !important;
+            }
+            .bullet-point {
+                color: #FFFFFF !important;
+            }
+            .bullet-point::before {
+                color: #FFD700 !important;
+            }
+            .custom-card {
+                background-color: rgba(255, 255, 255, 0.05) !important;
+                border: 1px solid rgba(255, 215, 0, 0.25) !important;
+                color: #FFFFFF !important;
+                box-shadow: none !important;
+            }
+            .custom-card h4, .custom-card h5 {
+                color: #FFD700 !important;
+            }
+            .text-white-50 {
+                color: rgba(255,255,255,0.6) !important;
+            }
+            @page {
+                size: landscape;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Slides Container -->
+    <div class="slide-container">
+        
+        <!-- Slide 1: Cover Page -->
+        <div class="slide active cover-slide">
+            <!-- Inline SVG background wrapper to force blue color in print PDF output -->
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            
+            <h5 class="text-uppercase tracking-widest text-white-50 mb-3">Academic Thesis Presentation</h5>
+            <h1 class="cover-title">Islamabad Rehab Center (IRC)</h1>
+            <h3 class="cover-subtitle">Universal Dynamic Web Portal & RBAC System</h3>
+            <div class="my-5">
+                <h5 class="text-white-50 mb-2">Presented by</h5>
+                <h3 class="fw-bold mb-1" style="color: #FFF !important;">Abdul Mughees</h3>
+                <p class="text-white-50 mb-0">Department of Business Administration</p>
+                <p class="text-white-50">University of Sahiwal, Sahiwal</p>
+            </div>
+            <div class="mt-4 pt-3">
+                <h5 class="text-white-50 mb-2">Supervised by</h5>
+                <h4 style="color: var(--heading-color) !important;">Mr. Umair Waqas</h4>
+                <p class="small text-white-50">Lecturer, Department of Business Administration</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Project Vision & Positive Vibe -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Project Vision & Positive Vibe</h2>
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Compassionate Care:</strong> Designed to shift clinical rehabilitation management from strict policing to therapeutic recovery tracking.</div>
+                    <div class="bullet-point"><strong>Empowering Recovery:</strong> Features a positive, clear orange visual layout symbolizing energy, warmth, and healing.</div>
+                    <div class="bullet-point"><strong>Daily Reflective Logs:</strong> Encourages patients to log mood shifts and triggers, fostering self-awareness and active participation in their recovery.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card">
+                        <h4 class="mb-3 text-warning"><i class="bi bi-heart-pulse-fill me-2"></i>Healing Environment</h4>
+                        <p class="lead mb-0" style="font-size: 1.2rem; line-height: 1.6;">
+                            Our platform bridges communication gaps, providing patients with a transparent recovery timeline and direct, secure access to counselors.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Detailed Project Analysis -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Detailed Project Analysis</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-3"><i class="bi bi-shield-lock-fill me-2"></i>Security Vector</h5>
+                        <p class="small mb-0">
+                            Evaluated against vulnerability models. Standard prepared inputs (PDO) mitigate 100% of SQL-Injection risks in patient directories.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-3"><i class="bi bi-diagram-3-fill me-2"></i>Workflow Automation</h5>
+                        <p class="small mb-0">
+                            Eliminates clinical paper logs. Automates caseload routing from counselor assignment down to medication logs and aftercare.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-3"><i class="bi bi-cpu-fill me-2"></i>System Optimization</h5>
+                        <p class="small mb-0">
+                            Dynamic memory allocation via database queries avoids heavy hardcoded arrays, ensuring faster loading over local hosts.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-3"><i class="bi bi-people-fill me-2"></i>User Adoption Index</h5>
+                        <p class="small mb-0">
+                            Three tailored portal interfaces accommodate different workflows, resulting in reduced training requirements for clinical personnel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Proposed Solution -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Proposed Solution</h2>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Centralized Data Hub:</strong> All settings, roles, page URLs, and user accounts are database-driven.</div>
+                    <div class="bullet-point"><strong>Workspace Separation:</strong> Segregated views tailored for Administrators, Clinicians, and Patients.</div>
+                    <div class="bullet-point"><strong>Secure Execution:</strong> Uses PHP Data Objects (PDO) parameterized inputs to block SQL Injection.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card text-center py-4">
+                        <div class="display-3 text-warning mb-3"><i class="bi bi-database-check"></i></div>
+                        <h4 class="mb-2">100% Dynamic Engine</h4>
+                        <p class="small text-muted mb-0" style="color: rgba(255,255,255,0.7) !important;">
+                            Any page additions, role changes, or branding settings update dynamically from the DB, with zero source code modifications needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: System Architecture -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">System Architecture</h2>
+            <div class="row align-items-center mt-3">
+                <div class="col-lg-7">
+                    <div class="p-3 border border-secondary rounded bg-dark-subtle font-monospace small" style="font-size: 11px; opacity: 0.9; color: #FFF !important; background: rgba(0,0,0,0.4) !important;">
+                        ┌────────────────────────────────────────────────────────┐
+                        │                     Presentation Tier                  │
+                        │           HTML5 / CSS3 / AdminLTE v4 (Bootstrap 5)     │
+                        └──────────────────────────┬─────────────────────────────┘
+                                                   │ HTTP / AJAX Request
+                                                   ▼
+                        ┌────────────────────────────────────────────────────────┐
+                        │                    Application Logic                   │
+                        │         header.php Access Guard ➔ core/session.php     │
+                        └──────────────────────────┬─────────────────────────────┘
+                                                   │ PDO Queries
+                                                   ▼
+                        ┌────────────────────────────────────────────────────────┐
+                        │                      Database Tier                     │
+                        │             MySQL / MariaDB Relational DB              │
+                        └────────────────────────────────────────────────────────┘
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bullet-point"><strong>3-Tier Structure:</strong> Separates presentation, business logic, and database persistence layers.</div>
+                    <div class="bullet-point"><strong>header.php Guard:</strong> Gatekeeps page execution by checking session variables and page URL permissions.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Administrative Portal Features -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Admin Portal Operations</h2>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="bullet-point"><strong>Dynamic Page Mapping:</strong> Create new page indexes and configure checkboxes to assign permissions.</div>
+                    <div class="bullet-point"><strong>Role Manager:</strong> Edit roles, generate custom system role keys, and protect system accounts.</div>
+                    <div class="bullet-point"><strong>Branding Customizer:</strong> Set center title and footer parameters directly from the dashboard.</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card">
+                        <h5 class="text-warning mb-3">Safe Role Migrations</h5>
+                        <p class="small mb-0">
+                            If a custom role containing active users is deleted, the system automatically migrates all affected users to a suspended state before deleting the role, preventing orphaned records.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Clinician & Doctor Portal Features -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Clinician Portal Operations</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-2"><i class="bi bi-person-badge-fill me-2"></i>Patient Intake Registry</h5>
+                        <p class="small mb-0">Complete initial intakes, record symptoms, assign doctor-to-patient relations, and log recovery status.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-2"><i class="bi bi-clipboard2-pulse me-2"></i>Treatment Goal Planner</h5>
+                        <p class="small mb-0">Formulate detailed medical detoxification phases, psychological counseling schedules, and aftercare plans.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-2"><i class="bi bi-calendar-event me-2"></i>Therapy Session Logger</h5>
+                        <p class="small mb-0">Log individual/group counseling sessions, record progress reviews, and track patient progress.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="custom-card h-100">
+                        <h5 class="text-warning mb-2"><i class="bi bi-chat-left-dots-fill me-2"></i>Support Tickets Workspace</h5>
+                        <p class="small mb-0">Track and respond to patient inquiries, input resolutions, and mark tickets resolved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Patient Portal Operations -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Patient Portal Operations</h2>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Daily Mood Logger:</strong> Track mood score (1-5) and log reflections, allowing doctors to view recovery trends.</div>
+                    <div class="bullet-point"><strong>Treatment Plan Monitor:</strong> Direct access to active detox goals and therapy schedules.</div>
+                    <div class="bullet-point"><strong>Confidential Reports:</strong> View session logs history and download Patient Recovery Reports.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card">
+                        <h5 class="text-warning mb-3">Support Ticket Submission</h5>
+                        <p class="small mb-0">
+                            Patients can submit assistance requests directly to their assigned clinician, ensuring continuous out-of-clinic communication.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Relational Database Schema Design -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Relational Database Design</h2>
+            <div class="row mt-4 align-items-center">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Core Settings:</strong> <code>system_settings</code>, <code>sys_roles</code>, <code>sys_pages</code>, <code>role_access</code>.</div>
+                    <div class="bullet-point"><strong>User Accounts:</strong> <code>users</code> table storing hashed credentials and active status.</div>
+                    <div class="bullet-point"><strong>Clinical Logs:</strong> <code>patients</code>, <code>therapy_sessions</code>, <code>treatment_plans</code>.</div>
+                    <div class="bullet-point"><strong>Patient Telemetry:</strong> <code>patient_daily_logs</code>, <code>support_requests</code>.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card bg-transparent" style="border-style: dashed;">
+                        <h5 class="text-warning mb-2">Relational Mappings</h5>
+                        <p class="small mb-0 text-muted" style="color: rgba(255,255,255,0.7) !important;">
+                            All transactional operations (therapy sessions, daily logs, support requests) are mapped to patient records and users using foreign keys to ensure data integrity.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Testing & Verification Plan -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Testing & Verification</h2>
+            <div class="row align-items-center mt-3">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Automated Test Suite:</strong> Created <code>test_suite.php</code> checking roles, auth gates, and access controls.</div>
+                    <div class="bullet-point"><strong>Caseload Isolation:</strong> Evaluated database queries to ensure patients cannot access other records.</div>
+                    <div class="bullet-point"><strong>Output Sanitization:</strong> Tested forms to confirm XSS scripts are blocked using htmlspecialchars.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card">
+                        <h5 class="text-success mb-2"><i class="bi bi-shield-check me-2"></i>11/11 Tests Passed</h5>
+                        <p class="small text-muted mb-0" style="color: rgba(255,255,255,0.7) !important;">
+                            Verified role mapping recursion, role deactivation migrations, session boundary limits, and login gates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Conclusion & Future Scope -->
+        <div class="slide">
+            <svg class="svg-bg" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="#0A192F"/></svg>
+            <h2 class="slide-title">Conclusion & Future Work</h2>
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="bullet-point"><strong>Conclusion:</strong> Delivered a secure, dynamic portal for Islamabad Rehab Center, themed in orange, with role-segregated dashboards.</div>
+                    <div class="bullet-point"><strong>Academic Achievement:</strong> Completed project documentation, proposal, user manual, and visual telemetry assets.</div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="custom-card">
+                        <h5 class="text-warning mb-3">Future Roadmap</h5>
+                        <ol class="small mb-0 text-muted">
+                            <li class="mb-1" style="color: #FFF !important;">Implement telehealth virtual therapy session platforms.</li>
+                            <li class="mb-1" style="color: #FFF !important;">Connect SMS reminder portals for outpatient schedulers.</li>
+                            <li style="color: #FFF !important;">Add pharmaceutical medicine tracking.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Presentation Navigation Footer Controls -->
+    <div class="footer-controls no-print">
+        <button class="control-btn" onclick="changeSlide(-1)"><i class="bi bi-chevron-left me-1"></i> Prev</button>
+        <span class="slide-number" id="slideNum">Slide 1 / 11</span>
+        <button class="control-btn" onclick="changeSlide(1)">Next <i class="bi bi-chevron-right ms-1"></i></button>
+    </div>
+
+    <!-- Interactive Navigation Scripts -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const slideNum = document.getElementById('slideNum');
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[index].classList.add('active');
+            slideNum.textContent = `Slide ${index + 1} / ${slides.length}`;
+        }
+
+        function changeSlide(step) {
+            currentSlide += step;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard Navigation Controls
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                changeSlide(-1);
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullScreen();
+            }
+        });
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(err);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
