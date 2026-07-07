@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Islamabad Rehab Center - Complete Project Documentation</title>
+    <!-- Google Font: Outfit & Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:300,400,600,700|Inter:300,400,600&display=swap">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #fff;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6, .display-4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: #111;
+        }
+        .doc-header {
+            border-bottom: 4px solid #FFA500;
+            padding-bottom: 25px;
+            margin-bottom: 40px;
+        }
+        .section-card {
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 35px;
+            background-color: #fafafa;
+        }
+        .badge-orange {
+            background-color: #FFA500;
+            color: white;
+            font-weight: 600;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 13px;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .section-card {
+                border: none;
+                background-color: transparent;
+                padding: 0;
+                margin-bottom: 50px;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 p-md-5">
+
+    <!-- Top Action Banner -->
+    <div class="container-fluid no-print mb-4 bg-light p-3 border rounded d-flex justify-content-between align-items-center">
+        <div>
+            <strong>Documentation Portal:</strong> You can download this document as a PDF by clicking "Save as PDF".
+        </div>
+        <div>
+            <button onclick="window.print();" class="btn btn-warning text-white fw-bold px-4 rounded-pill shadow-sm">
+                <i class="bi bi-file-pdf"></i> Save / Export as PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Cover Letterhead -->
+        <div class="doc-header d-flex justify-content-between align-items-end">
+            <div>
+                <img src="logo.png" alt="IRC Logo" style="max-height: 70px;" class="mb-3 rounded">
+                <h1 class="display-5 text-dark mb-1">Islamabad Rehab Center (IRC)</h1>
+                <p class="text-secondary lead mb-0">Universal Dynamic Portal & RBAC System Documentation</p>
+            </div>
+            <div class="text-end text-secondary small pb-2">
+                <p class="mb-0"><strong>Document Version:</strong> 1.0.0 (Stable)</p>
+                <p class="mb-0"><strong>Release Date:</strong> July 04, 2026</p>
+                <p class="mb-0"><strong>Prepared For:</strong> Islamabad Rehab Center Board</p>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="section-card shadow-sm">
+            <h3 class="mb-4 text-uppercase text-secondary tracking-wider"><i class="bi bi-list-nested me-2"></i>Table of Contents</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <ol class="list-group list-group-numbered list-group-flush">
+                        <li class="list-group-item bg-transparent"><a href="#overview" class="text-decoration-none text-dark">System Overview & Goals</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#structure" class="text-decoration-none text-dark">Directory & Core File Architecture</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#database" class="text-decoration-none text-dark">Database Schema Specification</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#rbac" class="text-decoration-none text-dark">Role-Based Access Control Model</a></li>
+                    </ol>
+                </div>
+                <div class="col-md-6">
+                    <ol class="list-group list-group-numbered list-group-flush" start="5">
+                        <li class="list-group-item bg-transparent"><a href="#portals" class="text-decoration-none text-dark">Portal Core Workspaces</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#reports" class="text-decoration-none text-dark">Printable PDF Reports Engine</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#deployment" class="text-decoration-none text-dark">Deployment & Seeding Manual</a></li>
+                        <li class="list-group-item bg-transparent"><a href="#testing" class="text-decoration-none text-dark">Automated Testing Playbook</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 1. System Overview -->
+        <div class="section-card" id="overview">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">1</span> System Overview</h2>
+            <p>
+                The <strong>Islamabad Rehab Center (IRC) Universal Skeleton System</strong> is a highly dynamic, enterprise-grade Role-Based Access Control (RBAC) portal built using <strong>Core PHP (PDO)</strong> and <strong>AdminLTE v4 (Bootstrap 5)</strong>.
+            </p>
+            <p>
+                The core philosophy of the system is <strong>100% dynamic rendering</strong>. It features zero hardcoded menus, page titles, or roles; everything is loaded dynamically from MySQL. The UI relies strictly on Bootstrap 5 styling tokens and utility classes, ensuring a cohesive and clean interface across all modules.
+            </p>
+            <h4 class="mt-4">Core System Values:</h4>
+            <ul>
+                <li><strong>Comprehensive Security Guards:</strong> Centralized authentication checking coupled with script-level RBAC queries prevents unauthorized access.</li>
+                <li><strong>Safe Role Management:</strong> Custom role creations dynamically generate role keys. Protected system roles prevent deletion, and deleting custom roles migrates existing users to a suspended state automatically to preserve database integrity.</li>
+                <li><strong>Dynamic Navigation Layouts:</strong> Submenus are generated recursively, automatically highlighting and expanding on active page URLs.</li>
+            </ul>
+        </div>
+
+        <!-- 2. Directory Structure -->
+        <div class="section-card" id="structure">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">2</span> File Architecture</h2>
+            <p>
+                The codebase follows a clean, modular structure. Below is the file layout of the project:
+            </p>
+            <table class="table table-bordered bg-white">
+                <thead class="table-secondary">
+                    <tr>
+                        <th style="width: 250px;">File Path</th>
+                        <th>Core Responsibility / Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>/index.php</code></td>
+                        <td>Orange-themed public landing page containing portal entrances.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/login.php</code></td>
+                        <td>Secure login interface handling sessions and verification.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/dashboard.php</code></td>
+                        <td>Dynamic router presenting dashboards based on active roles.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/core/config.php</code></td>
+                        <td>Global constants, DB credentials, and dynamic <code>BASE_URL</code>.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/core/db.php</code></td>
+                        <td>Establishes the PDO MySQL connection.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/core/functions.php</code></td>
+                        <td>Sanitization helpers, alert flasher, and badge colors generator.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/core/session.php</code></td>
+                        <td>Authentication checks and role validator arrays.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/includes/header.php</code></td>
+                        <td>Settings lookups, breadcrumbs, page mapping, and global access checks.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/includes/sidebar.php</code></td>
+                        <td>Recursive dynamic menu builder based on permitted role access.</td>
+                    </tr>
+                    <tr>
+                        <td><code>/includes/footer.php</code></td>
+                        <td>Closing tags, AdminLTE scripts, and Dark Mode local persistence logic.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 3. Database Design -->
+        <div class="section-card" id="database">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">3</span> Database Schema</h2>
+            <p>
+                The relational schema comprises 7 tables (5 core infrastructure tables and 2 clinical tables):
+            </p>
+            
+            <h5 class="mt-4 text-primary">Table 1: system_settings</h5>
+            <p class="small text-muted">Key/Value store for dynamic layout details.</p>
+            <pre>CREATE TABLE system_settings (
+    setting_key VARCHAR(50) PRIMARY KEY,
+    setting_value TEXT NULL
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 2: sys_roles</h5>
+            <p class="small text-muted">User roles catalog.</p>
+            <pre>CREATE TABLE sys_roles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    role_name VARCHAR(100) NOT NULL UNIQUE,
+    role_key VARCHAR(50) NOT NULL UNIQUE,
+    is_system_role TINYINT(1) DEFAULT 0
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 3: sys_pages</h5>
+            <p class="small text-muted">Self-referencing table supporting infinite nested menus.</p>
+            <pre>CREATE TABLE sys_pages (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    parent_id INT NULL,
+    page_name VARCHAR(100) NOT NULL,
+    page_url VARCHAR(255) NOT NULL,
+    icon_class VARCHAR(100) NULL,
+    sort_order INT DEFAULT 0,
+    FOREIGN KEY (parent_id) REFERENCES sys_pages (id) ON DELETE SET NULL
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 4: role_access</h5>
+            <p class="small text-muted">Mapping permissions connecting role keys to page IDs.</p>
+            <pre>CREATE TABLE role_access (
+    role_key VARCHAR(50) NOT NULL,
+    page_id INT NOT NULL,
+    PRIMARY KEY (role_key, page_id),
+    FOREIGN KEY (role_key) REFERENCES sys_roles (role_key) ON DELETE CASCADE,
+    FOREIGN KEY (page_id) REFERENCES sys_pages (id) ON DELETE CASCADE
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 5: users</h5>
+            <p class="small text-muted">Core user account table.</p>
+            <pre>CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    role VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    identity_no VARCHAR(50) NULL,
+    is_active TINYINT(1) DEFAULT 1,
+    FOREIGN KEY (role) REFERENCES sys_roles (role_key)
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 6: patients</h5>
+            <p class="small text-muted">Clinical records directory.</p>
+            <pre>CREATE TABLE patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    gender VARCHAR(20) NOT NULL,
+    admission_date DATE NOT NULL,
+    treatment_status VARCHAR(50) NOT NULL DEFAULT 'Intake',
+    assigned_therapist_id INT NULL,
+    medical_history TEXT NULL,
+    FOREIGN KEY (assigned_therapist_id) REFERENCES users (id) ON DELETE SET NULL
+);</pre>
+
+            <h5 class="mt-4 text-primary">Table 7: therapy_sessions</h5>
+            <p class="small text-muted">Therapist assessment logs connected to patients.</p>
+            <pre>CREATE TABLE therapy_sessions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    patient_id INT NOT NULL,
+    therapist_id INT NOT NULL,
+    session_date DATETIME NOT NULL,
+    session_type VARCHAR(50) NOT NULL,
+    notes TEXT NULL,
+    FOREIGN KEY (patient_id) REFERENCES patients (id) ON DELETE CASCADE,
+    FOREIGN KEY (therapist_id) REFERENCES users (id) ON DELETE CASCADE
+);</pre>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 4. RBAC Model -->
+        <div class="section-card" id="rbac">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">4</span> Role-Based Access Control</h2>
+            <p>
+                The security design combines automated page restriction loops and dynamic menu builders:
+            </p>
+            
+            <h4 class="mt-4">Page-Level Access Guard:</h4>
+            <p>
+                When a page is requested, it includes <code>header.php</code>. The header resolves the relative URL path of the script, matches it against <code>sys_pages</code>, and executes <code>checkPageAccess($pageId, $role_key)</code>.
+            </p>
+            <ul>
+                <li>If the page is registered in <code>sys_pages</code>, the user's active role must exist in <code>role_access</code> for that page ID; otherwise, execution is immediately halted, and a 403 Access Denied layout is rendered.</li>
+                <li>If the page is inside folders restricted to specific roles (like <code>/super_admin/</code> directories), non-authorized roles are blocked even if they bypass page ID matching.</li>
+            </ul>
+
+            <h4 class="mt-4">Menu Visibility Guard:</h4>
+            <p>
+                The sidebar menu loads pages and dynamically constructs a hierarchical tree using <code>getVisibleMenuTree()</code>.
+            </p>
+            <ul>
+                <li>A child menu item is only rendered if the user's role is authorized.</li>
+                <li>A parent category is only rendered if the parent itself is authorized, <strong>or</strong> if it contains at least one child category that the user has permission to access. This prevents empty folders from showing.</li>
+            </ul>
+        </div>
+
+        <!-- 5. Portal Workspaces -->
+        <div class="section-card" id="portals">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">5</span> Portal Workspaces</h2>
+            <p>
+                The application routes users dynamically to three specialized portals based on login configuration:
+            </p>
+
+            <h5 class="mt-3 text-primary">A. Patient Portal</h5>
+            <p>
+                Designed for recovering patients. It is completely isolated from system admin and clinical logs. 
+            </p>
+            <ul>
+                <li>Displays admission statistics, treatment status, and therapist details.</li>
+                <li>Provides access to their personal therapy session progress logs.</li>
+                <li>Allows downloading or printing their personal Clinical Recovery Report.</li>
+            </ul>
+
+            <h5 class="mt-3 text-primary">B. Clinician & Doctor Portal</h5>
+            <p>
+                Tailored for Therapists, Doctors, Case Counselors, and Clinical Directors.
+            </p>
+            <ul>
+                <li>Provides dashboard summaries of active clinical files and logs.</li>
+                <li><strong>Patient Intake:</strong> Full directory list and intake profiling form.</li>
+                <li><strong>Therapy Logs:</strong> Session schedulers and clinical note trackers.</li>
+                <li>Enables exporting individual Patient Recovery Reports or downloading clinic status summary reports.</li>
+            </ul>
+
+            <h5 class="mt-3 text-primary">C. System Admin Portal</h5>
+            <p>
+                Restricted to Super Admins. Provides complete oversight of the dynamic skeleton:
+            </p>
+            <ul>
+                <li><strong>Page Manager:</strong> Registers scripts, configures sort order, and updates checkbox access maps.</li>
+                <li><strong>Role Manager:</strong> Handles role additions (auto-generating key values) and protects system roles.</li>
+                <li><strong>User Manager:</strong> Configures login profiles and status toggles.</li>
+            </ul>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- 6. Reports Engine -->
+        <div class="section-card" id="reports">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">6</span> PDF Reports Engine</h2>
+            <p>
+                Printing and report downloading are handled via <code>dashboards/rehab/print_report.php</code>:
+            </p>
+            <ul>
+                <li><strong>Printer-Optimized Layouts:</strong> Employs CSS print styles that hide screen buttons, letterhead double borders, and optimize font sizing for paper layout or PDF exports.</li>
+                <li><strong>Auto-Print Trigger:</strong> Invokes the browser's built-in print dialog automatically after a 500ms delay to facilitate printing or saving as a PDF.</li>
+                <li><strong>Privacy Validation:</strong> Enforces data compliance by restricting patient accounts to printing only their own personal records, while clinical staff can print any patient profile or facility summary report.</li>
+            </ul>
+        </div>
+
+        <!-- 7. Deployment -->
+        <div class="section-card" id="deployment">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">7</span> Deployment & Seeding</h2>
+            <p>
+                To install the project locally, follow these steps:
+            </p>
+            <ol>
+                <li class="mb-2">
+                    <strong>Import SQL Schema:</strong> Create a MySQL database named <code>irc_db</code> and import <code>schema.sql</code>.
+                    <pre>C:\xampp\mysql\bin\mysql.exe -u root -e "CREATE DATABASE IF NOT EXISTS irc_db; USE irc_db; SOURCE E:/irc/schema.sql;"</pre>
+                </li>
+                <li class="mb-2">
+                    <strong>Configure Constants:</strong> Review <code>core/config.php</code>. The database variables default to localhost root with empty password. Dynamic URL detection handles folder pathing automatically.
+                </li>
+                <li class="mb-2">
+                    <strong>Start Server:</strong> Start Apache inside XAMPP or trigger the built-in PHP server:
+                    <pre>php -S localhost:8080</pre>
+                </li>
+            </ol>
+        </div>
+
+        <!-- 8. Testing -->
+        <div class="section-card" id="testing">
+            <h2 class="border-bottom pb-2 mb-3"><span class="badge badge-orange me-2">8</span> Testing & Verification</h2>
+            <p>
+                An automated integration test script <code>test_suite.php</code> is placed in the root directory to verify application health.
+            </p>
+            <p>
+                To execute verification:
+            </p>
+            <pre>php E:/irc/test_suite.php</pre>
+            <p class="mt-2 mb-0">
+                It tests DB queries, incorrect login password rejection, page permission authorizations for case counselors/admins, sidebar menu recursion visibility filters, and user migration updates upon deleting roles.
+            </p>
+        </div>
+
+        <!-- Sign-off -->
+        <div class="text-center mt-5 pt-3">
+            <hr class="w-25 mx-auto border-secondary mb-3">
+            <p class="text-secondary small mb-0">Prepared By Antigravity AI - Advanced Agentic Coding Team</p>
+            <p class="text-muted small">© 2026 Islamabad Rehab Center. All rights reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>
