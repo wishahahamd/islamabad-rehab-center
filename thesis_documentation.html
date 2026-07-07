@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Islamabad Rehab Center - Detailed Academic Project Thesis Documentation</title>
+    <!-- Google Font: Outfit & Inter -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Outfit:300,400,600,700|Inter:300,400,600&display=swap">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #fff;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+        h1, h2, h3, h4, h5, h6, .display-4 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            color: #111;
+        }
+        .page {
+            padding: 40px;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #ddd;
+        }
+        .cover-page {
+            text-align: center;
+            padding: 120px 40px;
+            border: 10px double #333;
+            margin-bottom: 60px;
+        }
+        .section-title {
+            border-bottom: 3px solid #FFA500;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+            letter-spacing: 1.2px;
+        }
+        .sub-section-title {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2a5298;
+            font-weight: 600;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        pre {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 12px;
+            overflow-x: auto;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            .page {
+                border-bottom: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body class="p-3 p-md-5">
+
+    <!-- Print Banner -->
+    <div class="container-fluid no-print mb-4 bg-light p-3 border rounded d-flex justify-content-between align-items-center">
+        <div>
+            <strong>Thesis Documentation:</strong> You can download this document as a PDF by clicking "Save as PDF".
+        </div>
+        <div>
+            <button onclick="window.print();" class="btn btn-warning text-white fw-bold px-4 rounded-pill shadow-sm">
+                <i class="bi bi-file-pdf"></i> Save / Export as PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= COVER PAGE ================= -->
+    <div class="container cover-page page">
+        <h5 class="text-uppercase tracking-wider text-muted mb-4">Project Report</h5>
+        <hr class="w-100 border-dark mb-5">
+        <h1 class="display-4 fw-bold mt-3 text-dark">Islamabad Rehab Center (IRC)</h1>
+        <h3 class="text-secondary mb-5">Universal Dynamic Web Portal & RBAC System</h3>
+        <div class="my-5 py-3">
+            <h5 class="fw-bold mb-3 text-dark">Submitted by</h5>
+            <h4 class="mb-1 text-dark"><strong>Muhammad Haseeb Javeed</strong></h4>
+            <p class="text-secondary mb-1">Registration No: 2022-ba-8953</p>
+            <p class="text-secondary mb-1">Class Roll No: BBIS-22-53</p>
+            <p class="text-secondary">Session 2022-2026</p>
+        </div>
+        <div class="my-5">
+            <h5 class="fw-bold mb-3 text-dark">Supervised by</h5>
+            <h4 class="text-dark"><strong>Mr. Umair Waqas</strong></h4>
+        </div>
+        <div class="mt-5 pt-4">
+            <img src="logo.png" alt="IRC Logo" style="max-height: 80px;" class="mb-3 rounded">
+            <h5 class="text-uppercase fw-bold text-dark mb-1">Department of Business Administration</h5>
+            <h4 class="text-dark"><strong>University of Sahiwal, Sahiwal</strong></h4>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= PRELIMINARY PAGES ================= -->
+    <div class="container page">
+        <h1 class="text-center fw-bold mb-5">Islamabad Rehab Center (IRC)</h1>
+        <p class="lead text-center mb-5">
+            A project submitted to the <br>
+            <strong>Department of Business Administration</strong> <br>
+            In <br>
+            Partial Fulfillment of the Requirements for the <br>
+            <strong>Bachelor's Degree in Business and Information Systems (BBIS)</strong> <br>
+            By <br>
+            <strong>Muhammad Haseeb Javeed</strong>
+        </p>
+
+        <div class="row mt-5 pt-5 text-start">
+            <div class="col-md-6 mb-4">
+                <h6 class="fw-bold text-dark">Internal Supervisor</h6>
+                <p class="mb-1"><strong>Mr. Umair Waqas</strong></p>
+                <p class="small text-muted mb-0">Lecturer</p>
+                <p class="small text-muted">Department of Business Administration</p>
+                <div class="border-top w-75 mt-3 pt-1 text-muted small">Signature / Date</div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h6 class="fw-bold text-dark">External Examiner</h6>
+                <p class="mb-1"><strong>_______________________</strong></p>
+                <p class="small text-muted mb-0">External Evaluator</p>
+                <p class="small text-muted">Department of Business Administration</p>
+                <div class="border-top w-75 mt-3 pt-1 text-muted small">Signature / Date</div>
+            </div>
+            <div class="col-md-6 mb-4 mt-3">
+                <h6 class="fw-bold text-dark">Chairperson</h6>
+                <p class="mb-1"><strong>Dr. Waris Ali</strong></p>
+                <p class="small text-muted mb-0">Chairperson</p>
+                <p class="small text-muted">Department of Business Administration</p>
+                <div class="border-top w-75 mt-3 pt-1 text-muted small">Signature / Date</div>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">Copyrights</h2>
+        <div class="card p-4 my-4 bg-light">
+            <p>
+                I, <strong>Haseeb Javed</strong>, hereby declare that the project report entitled <strong>"Islamabad Rehab Center (IRC) - Universal Dynamic Web Portal & RBAC System"</strong> submitted to the Department of Business Administration, University of Sahiwal, is my original work. This project has not been submitted previously for the award of any other degree, diploma, or fellowship at this or any other university. All sources of information and assistance received during the course of this work have been duly acknowledged.
+            </p>
+            <div class="text-end mt-5 pt-3">
+                <p class="mb-0"><strong>Haseeb Javed</strong></p>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">Declaration</h2>
+        <div class="card p-4 my-4 bg-light">
+            <p>
+                This is to declare that the project entitled <strong>"Islamabad Rehab Center (IRC) - Universal Dynamic Web Portal & RBAC System"</strong> is an original work done by the undersigned, in partial fulfillment of the requirements for the degree <strong>"Bachelors of Business and Information Systems (BBIS)"</strong> at the Department of Business Administration, University of Sahiwal, Sahiwal.
+            </p>
+            <p>
+                All the analysis, design, and system development have been accomplished by the undersigned. Moreover, this project has not been submitted to any other college or university.
+            </p>
+            <div class="text-end mt-5 pt-3">
+                <p class="mb-0"><strong>Haseeb Javed</strong></p>
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">Acknowledgements</h2>
+        <p>
+            First and foremost, all praise and gratitude belong to <strong>Allah Almighty</strong>, the Most Beneficent and Merciful, who blessed me with the health, wisdom, and perseverance to complete this project successfully.
+        </p>
+        <p>
+            I would like to express my deepest gratitude to my supervisor, <strong>Mr. Umair Waqas</strong>, for his invaluable guidance, constructive criticism, and continuous encouragement throughout the development of this project. His expertise in system analysis and software engineering was instrumental in shaping this platform.
+        </p>
+        <p>
+            I am also highly thankful to <strong>Dr. Waris Ali</strong>, Chairperson of the Department of Business Administration, and <strong>Dr. Atif</strong>, for providing a conducive academic environment and their unwavering support during my degree program.
+        </p>
+        <p>
+            Lastly, I extend my heartfelt thanks to my parents, family, and friends for their endless patience, moral support, and prayers, which kept me motivated during the challenging phases of this project.
+        </p>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">Dedication</h2>
+        <div class="text-center my-5 py-5">
+            <p class="fst-italic fs-5 text-secondary">
+                "We would like to dedicate this accomplishment to our beloved and caring Parents, friends, and to our teachers with the support of whom I am standing at this step of my life stairs."
+            </p>
+            <p class="fst-italic fs-5 text-secondary mt-3">
+                "We also dedicate this dissertation to Mr. Umair Waqas who has supported us throughout the process."
+            </p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- ================= LIST OF TABLES & FIGURES ================= -->
+        <h2 class="section-title">List of Tables</h2>
+        <table class="table table-bordered">
+            <thead class="table-secondary">
+                <tr>
+                    <th style="width: 150px;">Table No</th>
+                    <th>Table Description</th>
+                    <th style="width: 100px; text-align: center;">Page No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table 1.1</td>
+                    <td>Tools and Technology Frameworks</td>
+                    <td class="text-center">1</td>
+                </tr>
+                <tr>
+                    <td>Table 1.2</td>
+                    <td>Project Gantt Chart Task Schedule</td>
+                    <td class="text-center">4</td>
+                </tr>
+                <tr>
+                    <td>Table 3.1</td>
+                    <td>Data Dictionary - system_settings Table</td>
+                    <td class="text-center">15</td>
+                </tr>
+                <tr>
+                    <td>Table 3.2</td>
+                    <td>Data Dictionary - sys_roles Table</td>
+                    <td class="text-center">15</td>
+                </tr>
+                <tr>
+                    <td>Table 3.3</td>
+                    <td>Data Dictionary - sys_pages Table</td>
+                    <td class="text-center">15</td>
+                </tr>
+                <tr>
+                    <td>Table 3.4</td>
+                    <td>Data Dictionary - role_access Table</td>
+                    <td class="text-center">16</td>
+                </tr>
+                <tr>
+                    <td>Table 3.5</td>
+                    <td>Data Dictionary - users Table</td>
+                    <td class="text-center">16</td>
+                </tr>
+                <tr>
+                    <td>Table 3.6</td>
+                    <td>Data Dictionary - patients Table</td>
+                    <td class="text-center">16</td>
+                </tr>
+                <tr>
+                    <td>Table 3.7</td>
+                    <td>Data Dictionary - therapy_sessions Table</td>
+                    <td class="text-center">16</td>
+                </tr>
+                <tr>
+                    <td>Table 6.1</td>
+                    <td>Risk Assessment & Mitigation Matrix</td>
+                    <td class="text-center">29</td>
+                </tr>
+                <tr>
+                    <td>Table 6.2</td>
+                    <td>System Integration Test Matrix</td>
+                    <td class="text-center">30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">List of Figures</h2>
+        <table class="table table-bordered">
+            <thead class="table-secondary">
+                <tr>
+                    <th style="width: 150px;">Figure No</th>
+                    <th>Figure Description</th>
+                    <th style="width: 100px; text-align: center;">Page No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Figure 1.1</td>
+                    <td>Development Gantt Chart Timeline</td>
+                    <td class="text-center">4</td>
+                </tr>
+                <tr>
+                    <td>Figure 5.1</td>
+                    <td>System Modular Architecture Map</td>
+                    <td class="text-center">19</td>
+                </tr>
+                <tr>
+                    <td>Figure 5.2</td>
+                    <td>User Authorization Session Flow</td>
+                    <td class="text-center">20</td>
+                </tr>
+                <tr>
+                    <td>Figure 5.3</td>
+                    <td>Data Entity Relationship Diagram (ERD)</td>
+                    <td class="text-center">21</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">List of Abbreviations</h2>
+        <table class="table table-striped table-bordered">
+            <thead class="table-secondary">
+                <tr>
+                    <th style="width: 200px;">Abbreviation</th>
+                    <th>Full Meaning / Definition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>IRC</strong></td>
+                    <td>Islamabad Rehab Center</td>
+                </tr>
+                <tr>
+                    <td><strong>RBAC</strong></td>
+                    <td>Role-Based Access Control</td>
+                </tr>
+                <tr>
+                    <td><strong>PDO</strong></td>
+                    <td>PHP Data Objects</td>
+                </tr>
+                <tr>
+                    <td><strong>SQL</strong></td>
+                    <td>Structured Query Language</td>
+                </tr>
+                <tr>
+                    <td><strong>CRUD</strong></td>
+                    <td>Create, Read, Update, Delete</td>
+                </tr>
+                <tr>
+                    <td><strong>CNIC</strong></td>
+                    <td>Computerized National Identity Card</td>
+                </tr>
+                <tr>
+                    <td><strong>XSS</strong></td>
+                    <td>Cross-Site Scripting</td>
+                </tr>
+                <tr>
+                    <td><strong>PDF</strong></td>
+                    <td>Portable Document Format</td>
+                </tr>
+                <tr>
+                    <td><strong>UI / UX</strong></td>
+                    <td>User Interface / User Experience</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h2 class="section-title">Abstract</h2>
+        <p>
+            Rehabilitation facilities handle critical, highly sensitive clinical data, including patient medical profiles, substance detox stages, and therapy progress notes. Managing these variables with manual logs or fragmented systems leads to security risks, communication delays, and audit inconsistencies. This project presents a <strong>Universal Web Portal & RBAC System</strong> built specifically for the <strong>Islamabad Rehab Center (IRC)</strong>.
+        </p>
+        <p>
+            The system employs a 100% database-driven architecture, avoiding hardcoded routing logic, roles, or navigation menus. Built using Core PHP (PDO) and AdminLTE v4 (Bootstrap 5), it delivers a responsive portal mapped across three client workspaces: the Patient Portal (allowing recovery tracking), the Clinician Portal (intake and session logs), and the Super Admin Portal (RBAC mapping). 
+        </p>
+        <p>
+            Furthermore, the system integrates a printer-optimized reporting engine that enables direct PDF exports, supporting both operational reports and patient clinical summaries.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 1 ================= -->
+    <div class="container page" id="chapter1">
+        <h2 class="section-title">Chapter 1: Introduction</h2>
+        <p>
+            This chapter introduces the tools, design methodologies, timeline mappings, and feasibility validations associated with the development of the Islamabad Rehab Center Portal.
+        </p>
+
+        <h3 class="sub-section-title">1.1 Tools and Technology Used</h3>
+        <p>
+            The technology stack was selected to ensure maximum lightweight performance, zero framework overhead, and compatibility with standard medical facility hosting setups.
+        </p>
+        <table class="table table-bordered bg-white">
+            <thead class="table-secondary">
+                <tr>
+                    <th>Component</th>
+                    <th>Technology Framework</th>
+                    <th>Purpose inside IRC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Core Backend</strong></td>
+                    <td>Core PHP 8.2</td>
+                    <td>Handles script requests, secure sessions, and routing logic.</td>
+                </tr>
+                <tr>
+                    <td><strong>Database Adapter</strong></td>
+                    <td>PDO (PHP Data Objects)</td>
+                    <td>Secures database interactions via prepared statement parameters.</td>
+                </tr>
+                <tr>
+                    <td><strong>Database</strong></td>
+                    <td>MySQL (MariaDB)</td>
+                    <td>Stores dynamic configuration states, pages, roles, and patients.</td>
+                </tr>
+                <tr>
+                    <td><strong>User Interface</strong></td>
+                    <td>AdminLTE v4 & Bootstrap 5.3</td>
+                    <td>Responsive card templates, dashboard widgets, and dark/light color themes.</td>
+                </tr>
+                <tr>
+                    <td><strong>Icons Pack</strong></td>
+                    <td>Bootstrap Icons v1.11</td>
+                    <td>Scalable menu folder and action identifiers.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 class="sub-section-title">1.3 Gantt Chart (Development Timeline)</h3>
+        <p>
+            The project timeline was divided into five distinct phases, mapping tasks from database seeding to final security audits:
+        </p>
+        <div class="p-3 border rounded bg-light mb-4 text-center">
+            <strong>Figure 1.1: Development Gantt Chart Timeline</strong>
+            <pre class="mb-0 text-start">
+PHASE 1: DB & Seeds Setup  [████████] (Week 1)
+PHASE 2: Core PDO Helpers  [        ████████] (Week 2)
+PHASE 3: Layouts & Menu    [                ████████] (Week 3)
+PHASE 4: Portal Management [                        ████████] (Week 4)
+PHASE 5: Audit & Testing   [                                ████] (Week 5)
+            </pre>
+        </div>
+        <p class="small text-muted"><strong>Table 1.2: Project Gantt Chart Task Schedule</strong></p>
+        <table class="table table-bordered bg-white">
+            <thead class="table-light">
+                <tr><th>Task ID</th><th>Description</th><th>Start Date</th><th>End Date</th><th>Duration</th><th>Dependency</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>T1</td><td>MySQL Database Schema Design & Seeds Seeding</td><td>2026-06-01</td><td>2026-06-07</td><td>7 days</td><td>-</td></tr>
+                <tr><td>T2</td><td>Config, DB PDO connection & functions.php helpers</td><td>2026-06-08</td><td>2026-06-14</td><td>7 days</td><td>T1</td></tr>
+                <tr><td>T3</td><td>Layout implementation (header.php, sidebar.php, footer.php)</td><td>2026-06-15</td><td>2026-06-21</td><td>7 days</td><td>T2</td></tr>
+                <tr><td>T4</td><td>Role manager, Page CRUD & Patient intakes profiling scripts</td><td>2026-06-22</td><td>2026-06-28</td><td>7 days</td><td>T3</td></tr>
+                <tr><td>T5</td><td>PDF Report exports, Dark Mode settings & Automated testing</td><td>2026-06-29</td><td>2026-07-04</td><td>6 days</td><td>T4</td></tr>
+            </tbody>
+        </table>
+
+        <h3 class="sub-section-title">1.4 Project Feasibility Analysis</h3>
+        
+        <h5>1.4.1 Technical Feasibility</h5>
+        <p>
+            Core PHP is supported across standard web hosting plans and XAMPP setups. The model uses native PDO parameterized SQL inputs, neutralizing the risk of SQL injection. AdminLTE v4 runs on vanilla JavaScript (no jQuery), which keeps assets lightweight and compatible with modern web environments. The database configuration dynamically maps the application base directory pathing, preventing path resolution errors when deployed on localized servers.
+        </p>
+
+        <h5>1.4.2 Operational Feasibility</h5>
+        <p>
+            The system partitions clinical data into clean, role-specific views. Case Managers can execute patient intakes, Doctors can write therapy logs, and Patients can review their clinical summaries. This matches the daily workflows at the rehab facility. The responsive UI layout accommodates clinicians working on-site on desktop systems as well as staff accessing logs via mobile devices.
+        </p>
+
+        <h5>1.4.3 Economic Feasibility</h5>
+        <p>
+            Using an open-source LAMP stack (Linux, Apache, MySQL, PHP) avoids software licensing fees, making it an economically viable solution for the center. The hardware requirements are extremely minimal, allowing the facility to deploy the portal on their existing office computers without needing new hardware.
+        </p>
+
+        <h5>1.4.4 Schedule Feasibility</h5>
+        <p>
+            Structuring development into independent phases (database setup, core helpers, dashboard routing, and dynamic controls) enabled delivery within a structured five-week schedule. Parallel task allocations during the layouts and CRUD implementations optimized resources.
+        </p>
+
+        <h5>1.4.5 Specification Feasibility</h5>
+        <p>
+            Dynamic configuration tables make the codebase highly adaptable. Updating system branding, registering pages, or changing role permissions can be accomplished directly in the database without modifying PHP source code. This makes maintenance and future updates simple.
+        </p>
+
+        <h5>1.4.6 Motivational Feasibility</h5>
+        <p>
+            Replacing manual paper logs with an organized portal reduces administrative overhead for clinicians and provides patients with a transparent view of their recovery progress. This keeps staff engaged and helps motivate patients throughout their recovery process.
+        </p>
+
+        <h5>1.4.7 Legal & Ethical Feasibility</h5>
+        <p>
+            By restricting access through strict RBAC validation, the portal protects patient data privacy and keeps records confidential in compliance with medical data regulations. Every diagnostic report is marked confidential, preventing illegal distribution of sensitive healthcare files.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 2 ================= -->
+    <div class="container page" id="chapter2">
+        <h2 class="section-title">Chapter 2: Problem Defining</h2>
+        <p>
+            This chapter outlines the core operational and security challenges identified at the rehab center, which the web portal aims to solve.
+        </p>
+
+        <h4>2.1 Problem of Limited Reach and Accessibility</h4>
+        <p>
+            In manual workflows, patients and family members must physically visit the center to receive treatment summaries, progress updates, or counselor feedback. Outpatients lack a direct channel to review their progress notes, which often impacts patient motivation and retention.
+        </p>
+
+        <h4>2.2 Problem of Privacy Breaches</h4>
+        <p>
+            Paper clinical files and non-permission-controlled systems run the risk of exposing sensitive patient data, detox histories, and counselor notes to unauthorized personnel. Since drug rehabilitation records are highly sensitive, any data leak can cause serious compliance issues.
+        </p>
+
+        <h4>2.3 Problem of Authenticity and Trust</h4>
+        <p>
+            Without system logs and audit signatures, printed patient certificates and status summaries can be altered, creating trust and verification issues. Certifications for court sessions or employment audits require verifiable clinical histories.
+        </p>
+
+        <h4>2.4 Problem of Inefficient Filtering</h4>
+        <p>
+            In systems without dynamic menus, users are presented with unnecessary pages and controls, cluttering the UI and increasing operational errors. A counselor does not need to see system settings configurations, and a patient should never view logs belonging to others.
+        </p>
+
+        <h4>2.5 Problem of Unstructured Communication</h4>
+        <p>
+            Verbal summaries and handwritten assessment notes lead to inconsistent record-keeping between different clinicians and therapy teams. When patients move from Detoxification to Rehabilitation, critical diagnostic histories are often lost in transit.
+        </p>
+
+        <h4>2.6 Problem of Security and Safety</h4>
+        <p>
+            Healthcare databases are frequent targets of malicious inputs. Standard raw SQL interactions are vulnerable to injection attacks, risking data loss or unauthorized access. Furthermore, open inputs can allow Cross-Site Scripting (XSS) actions inside assessment textareas.
+        </p>
+
+        <h4>2.7 Problem of Manual Administration</h4>
+        <p>
+            Adding new pages, changing roles, or adjusting menu configurations manually in the code is time-consuming and prone to syntax errors. It requires constant developer assistance, which increases operational costs and delays.
+        </p>
+
+        <h4>2.8 Problem of Access Control</h4>
+        <p>
+            Weak access controls can allow users with lower clearance to access sensitive administrative modules or other patients' private clinical files. The system must restrict folders like <code>/super_admin/</code> so they are only accessible by authorized users.
+        </p>
+
+        <h4>2.10 Problem of Geographical Barriers</h4>
+        <p>
+            Without secure remote access options, counseling staff and clinical directors are unable to audit patient intakes or log critical session details when working off-site. This leads to information lags and delays clinical decisions.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 3 ================= -->
+    <div class="container page" id="chapter3">
+        <h2 class="section-title">Chapter 3: Software Requirement Specification</h2>
+        
+        <h4>2.1 Purpose</h4>
+        <p>
+            This document specifies the software requirements for the Islamabad Rehab Center Portal, detailing the functional permissions, data dictionaries, and target operational environments.
+        </p>
+
+        <h5>2.1.1 Document Conventions</h5>
+        <ul>
+            <li>Core backend queries must use PDO prepared statements to secure database interactions.</li>
+            <li>All UI elements must utilize Bootstrap 5 utility classes to maintain design consistency.</li>
+            <li>All outputs displayed on the screen must be filtered through sanitization helpers.</li>
+        </ul>
+
+        <h5>2.1.2 Intended Audience</h5>
+        <p>
+            This SRS is written for clinical systems auditors, development teams, database administrators, and the management board of Islamabad Rehab Center.
+        </p>
+
+        <h4>2.2 Overall Description</h4>
+        
+        <h5>2.2.1 Product Perspective</h5>
+        <p>
+            The portal serves as a central medical and administrative dashboard, connecting patient intakes, clinical logs, and system configuration tools. It operates as an intranet/extranet solution hosted locally on clinic hardware.
+        </p>
+
+        <h5>2.2.2 User Classes and Characteristics</h5>
+        <ol class="mb-3">
+            <li><strong>Super Admin:</strong> Full access to system configs, role edits, page mapping tables, and user registrations.</li>
+            <li><strong>Clinical Director:</strong> Manages patient lists, schedules therapy sessions, and reviews overall clinical records.</li>
+            <li><strong>Doctor / Therapist:</strong> Conducts therapy sessions and logs progress notes.</li>
+            <li><strong>Case Counselor:</strong> Handles initial patient intake registrations.</li>
+            <li><strong>Patient:</strong> Accesses personal treatment status information and session history.</li>
+        </ol>
+
+        <h5>2.2.3 Operating Environment</h5>
+        <ul>
+            <li><strong>Server Operating System:</strong> Windows 10/11 or Linux (Ubuntu Server recommended).</li>
+            <li><strong>Web Server:</strong> Apache 2.4 / built-in PHP server.</li>
+            <li><strong>Database Engine:</strong> MySQL 5.7+ or MariaDB 10.4+.</li>
+            <li><strong>Client Browsers:</strong> Chrome, Edge, Safari, Firefox.</li>
+        </ul>
+
+        <h4>2.3 Functional Requirements</h4>
+        <div class="p-3 border rounded bg-white mb-3">
+            <strong>FR-1: Authentication & Session Protection</strong>
+            <p class="mb-0 small text-secondary">
+                The system must enforce secure login credentials, hashing passwords using BCrypt (PASSWORD_DEFAULT). Active sessions must be verified on every page reload.
+            </p>
+        </div>
+        <div class="p-3 border rounded bg-white mb-3">
+            <strong>FR-2: Dynamic Menu Generation</strong>
+            <p class="mb-0 small text-secondary">
+                The sidebar menu must load hierarchy options from <code>sys_pages</code>, verify if the user's role has permission to access each page, and filter out unauthorized items automatically.
+            </p>
+        </div>
+        <div class="p-3 border rounded bg-white mb-3">
+            <strong>FR-3: Contextual URL Access Check</strong>
+            <p class="mb-0 small text-secondary">
+                Every loaded script must resolve its path relative to the root directory and confirm the active role possesses a mapping index in the <code>role_access</code> table for that page.
+            </p>
+        </div>
+        <div class="p-3 border rounded bg-white mb-3">
+            <strong>FR-4: Safe Deletion & Migrations</strong>
+            <p class="mb-0 small text-secondary">
+                Deleting a custom role must block the action if it is marked as a system role. If it is a custom role with active users, the system must migrate the users to a suspended state before deleting the role to preserve database integrity.
+            </p>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h4>2.5 Detailed Use Case Specifications</h4>
+        <table class="table table-bordered bg-white">
+            <thead class="table-light">
+                <tr><th style="width: 200px;">Use Case Attribute</th><th>UC-1 Details (Intake)</th><th>UC-2 Details (Sessions)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Use Case Name</strong></td><td>Patient Intake & Profiling</td><td>Log Therapy Session</td></tr>
+                <tr><td><strong>Primary Actor</strong></td><td>Case Counselor / Super Admin</td><td>Doctor / Therapist</td></tr>
+                <tr><td><strong>Preconditions</strong></td><td>User must be logged in and authorized.</td><td>Patient profile must exist in the database.</td></tr>
+                <tr><td><strong>Trigger</strong></td><td>Click "Add Patient" on the Intake page.</td><td>Click "Log Session" on the Sessions page.</td></tr>
+                <tr><td><strong>Main Success Scenario</strong></td><td>
+                    1. Open intake form.<br>
+                    2. Input patient details.<br>
+                    3. Assign a therapist and status.<br>
+                    4. Click Save.
+                </td><td>
+                    1. Open session form.<br>
+                    2. Select patient and therapist.<br>
+                    3. Select session date and type.<br>
+                    4. Input progress notes and click Save.
+                </td></tr>
+                <tr><td><strong>Postconditions</strong></td><td>Patient is registered and assigned to a therapist.</td><td>Session notes are logged and display on the patient's timeline.</td></tr>
+            </tbody>
+        </table>
+
+        <h4 class="mt-4" id="datadictionary">2.6 Data Dictionary & Database Schema Design</h4>
+        <p>
+            Please refer to the <a href="#datadictionary">Data Dictionary tables (Tables 3.1 - 3.7)</a> outlined in the previous chapter for column structures, DSN mappings, and foreign key relations.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 4 ================= -->
+    <div class="container page" id="chapter4">
+        <h2 class="section-title">Chapter 4: Methodology</h2>
+        <p>
+            This chapter outlines the development methodology, development environment tools, and hardware constraints used to construct the system.
+        </p>
+
+        <h4>4.1 Tools</h4>
+        <ul>
+            <li><strong>Development Environment:</strong> VS Code / Sublime Text with PHP debug configuration extensions.</li>
+            <li><strong>Database Client:</strong> phpMyAdmin / MySQL Command Line interface for seeding updates.</li>
+            <li><strong>Version Control:</strong> Git local repository mapping.</li>
+            <li><strong>Diagnostics Engine:</strong> PHP compiler linter and automated test suite.</li>
+        </ul>
+
+        <h4>4.2 Software Specifications</h4>
+        <ul>
+            <li><strong>PHP Engine:</strong> Version 8.1 / 8.2 with PDO MySQL support.</li>
+            <li><strong>Database:</strong> MySQL 5.7+ / MariaDB 10.4.</li>
+            <li><strong>Frontend Frameworks:</strong> CSS custom properties variables mapping Bootstrap 5 styling tokens.</li>
+        </ul>
+
+        <h4>4.3 Hardware Specifications</h4>
+        <ul>
+            <li><strong>Processor:</strong> Dual-Core 2.0 GHz Intel/AMD or higher.</li>
+            <li><strong>Memory:</strong> Minimum 4 GB RAM.</li>
+            <li><strong>Storage:</strong> 500 MB free storage for local files and database updates.</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 5 ================= -->
+    <div class="container page" id="chapter5">
+        <h2 class="section-title">Chapter 5: Detailed Design & Architecture</h2>
+        
+        <h4>5.1 Introduction</h4>
+        <p>
+            This chapter details the system architecture, authentication flow, and database entity relationships.
+        </p>
+
+        <h4>5.2 System Architecture</h4>
+        
+        <h5>5.2.1 Architecture Design & Approach</h5>
+        <p>
+            The project uses a modular design approach, separating database configuration, page structure, and layout assets:
+        </p>
+        <div class="p-3 border rounded bg-light mb-4 text-center">
+            <strong>Figure 5.1: System Modular Architecture Map</strong>
+            <pre class="mb-0 text-start">
+                  ┌──────────────────────┐
+                  │   Client Browser     │
+                  └──────────┬───────────┘
+                             │ (HTTP Requests)
+                             ▼
+                  ┌──────────────────────┐
+                  │    Core Router       │ ◄───► [core/session.php]
+                  └──────────┬───────────┘
+                             │
+            ┌────────────────┴────────────────┐
+            ▼                                 ▼
+┌──────────────────────┐           ┌──────────────────────┐
+│  Layout Components   │           │ Dynamic Action Pages │
+│  (includes/header.php│           │ (manage_patients.php │
+│   includes/sidebar.h)│           │  manage_users.php...)│
+└──────────┬───────────┘           └──────────┬───────────┘
+           │                                  │
+           └────────────────┬─────────────────┘
+                            ▼
+               ┌──────────────────────────┐
+               │    Database (PDO DSN)    │ ◄───► [core/db.php]
+               └──────────────────────────┘
+            </pre>
+        </div>
+
+        <h5>5.2.2 Architecture Design (User Authorization Flow)</h5>
+        <p>
+            The flow chart below illustrates how authentication and page access are verified on each page request:
+        </p>
+        <div class="p-3 border rounded bg-light mb-4">
+            <strong>Figure 5.2: User Authorization Session Flow</strong>
+            <pre class="mb-0">
+User Request ➔ session.php Check ➔ [Logged In?]
+                                       ├── No ➔ Redirect to login.php
+                                       └── Yes ➔ Load header.php
+                                                    └── checkPageAccess() Query
+                                                           ├── Allowed ➔ Load Page Content
+                                                           └── Denied  ➔ Halt & Show 403 Card
+            </pre>
+        </div>
+
+        <div class="page-break"></div>
+
+        <h5>5.2.3 Subsystem Architecture (ERD Diagram)</h5>
+        <p>
+            The relationships between database entities are shown in the Entity-Relationship Diagram (ERD) below:
+        </p>
+        <div class="p-3 border rounded bg-light mb-4 text-center">
+            <strong>Figure 5.3: Data Entity Relationship Diagram (ERD)</strong>
+            <pre class="mb-0 text-start">
+  ┌──────────────┐                  ┌─────────────┐
+  │  sys_roles   │ 1            0..*│    users    │
+  │ ------------ │──────────────────│ ----------- │
+  │ * role_key   │                  │ * role      │
+  │   role_name  │                  └─────────────┘
+  └──────┬───────┘
+         │ 1
+         │
+         │ 0..*
+  ┌──────▼───────┐                  ┌─────────────┐
+  │ role_access  │0..*             1│  sys_pages  │
+  │ ------------ │──────────────────│ ----------- │
+  │ * role_key   │                  │ * id        │
+  │   parent_id  │                  │   parent_id │
+  └──────────────┘                  └─────────────┘
+                                           │ 1
+                                           │
+                                           │ 0..*
+  ┌──────────────┐                  ┌──────▼──────┐
+  │   patients   │1             0..*│  sessions   │
+  │ ------------ │──────────────────│ ----------- │
+  │ * id         │                  │ * patient_id│
+  │   therapist  │                  │   therapist │
+  └──────────────┘                  └─────────────┘
+            </pre>
+        </div>
+
+        <h4>5.3 Detailed System Design</h4>
+        <p>
+            The system design uses core layouts to split page rendering. The header file <code>header.php</code> acts as the page execution gatekeeper, initiating configurations, checking session validity, and auditing role permissions.
+        </p>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 6 ================= -->
+    <div class="container page" id="chapter6">
+        <h2 class="section-title">Chapter 6: Implementation & Testing</h2>
+        
+        <h4>6.1 Introduction</h4>
+        <p>
+            This chapter covers project scheduling, risk management, and the system test suite.
+        </p>
+
+        <h5>6.1.1 Project Management</h5>
+        <p>
+            The project development timeline mapped tasks progressively, starting with schema definitions and security filters, followed by page directories, and concluding with usability testing.
+        </p>
+
+        <h5>6.1.2 Risk Management Plan</h5>
+        <p>
+            Below is the risk matrix mapping identified project risks to their corresponding mitigations:
+        </p>
+        <p class="small"><strong>Table 6.1: Risk Assessment & Mitigation Matrix</strong></p>
+        <table class="table table-bordered bg-white">
+            <thead class="table-light">
+                <tr><th>Risk Description</th><th>Impact</th><th>Mitigation Plan</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SQL Injection Inputs</td>
+                    <td>High Risk</td>
+                    <td>Enforce PDO parameterized statements globally. Avoid direct query variables concatenation.</td>
+                </tr>
+                <tr>
+                    <td>Cross-Site Scripting (XSS)</td>
+                    <td>Medium Risk</td>
+                    <td>Enforce <code>htmlspecialchars()</code> sanitization helper on all string outputs.</td>
+                </tr>
+                <tr>
+                    <td>Database Orphans on Delete</td>
+                    <td>Medium Risk</td>
+                    <td>Apply SQL transaction rollbacks and migrate users of deleted roles to the suspended role status.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <h4 class="mt-4">6.2 Test Plans</h4>
+        <p>
+            Below is the complete testing matrix executed against the codebase during integration audits, verifying both allowed user flows and blocked boundary attempts:
+        </p>
+        <p class="small"><strong>Table 6.2: System Integration Test Matrix</strong></p>
+        <table class="table table-bordered bg-white align-middle">
+            <thead class="table-secondary">
+                <tr>
+                    <th style="width: 80px;">Test ID</th>
+                    <th>Test Objective</th>
+                    <th>Input Details</th>
+                    <th>Expected Output Result</th>
+                    <th>Actual Result</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TC-01</strong></td>
+                    <td>Invalid Login Protection</td>
+                    <td>Email: <code>admin@irc.com</code><br>Pass: <code>wrong_pass</code></td>
+                    <td>Show login error "Invalid email or password." and block session creation.</td>
+                    <td>Error card displayed. Login blocked.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-02</strong></td>
+                    <td>Valid Admin Auth Flow</td>
+                    <td>Email: <code>superadmin@irc.gov.pk</code><br>Pass: <code>admin123</code></td>
+                    <td>Redirect user to <code>dashboard.php</code> and set session role variable.</td>
+                    <td>Successful login. Redirected to Admin Dashboard.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-03</strong></td>
+                    <td>Dynamic Menu Hiding</td>
+                    <td>Role: <code>counselor</code></td>
+                    <td>Hide "System Management" folder and "Therapy Sessions" link from the sidebar.</td>
+                    <td>Sidebar updated. Unauthorized pages hidden.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-04</strong></td>
+                    <td>Direct URL Gate Blocking</td>
+                    <td>Access: <code>manage_users.php</code><br>Role: <code>counselor</code></td>
+                    <td>Block execution and render a clean "403 Forbidden" access card layout.</td>
+                    <td>403 card rendered. Script execution halted.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-05</strong></td>
+                    <td>Patient Data Isolation</td>
+                    <td>Access: Patient <code>Ali Raza</code> details<br>Logged: Patient <code>Zainab Bibi</code></td>
+                    <td>Deny report printing and show "Access Denied" error message.</td>
+                    <td>Access blocked. Privacy restriction enforced.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+                <tr>
+                    <td><strong>TC-06</strong></td>
+                    <td>Role Deletion Integrity Check</td>
+                    <td>Delete: Custom role <code>Librarian</code> with active users</td>
+                    <td>Migrate the assigned users to the <code>suspended</code> status and delete the role.</td>
+                    <td>Users migrated to suspended. Role deleted safely.</td>
+                    <td><span class="badge bg-success">PASS</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 7 ================= -->
+    <div class="container page" id="chapter7">
+        <h2 class="section-title">Chapter 7: Results & Discussions</h2>
+        
+        <h4>7.1 User Interface Screenshots</h4>
+        <p>
+            The project features dynamic interfaces rendered with AdminLTE v4 styling:
+        </p>
+        <div class="row g-3 my-4">
+            <div class="col-md-6">
+                <div class="border p-2 rounded bg-light text-center">
+                    <div class="p-4 bg-primary text-white rounded shadow-sm">
+                        <i class="bi bi-shield-lock-fill fs-1"></i>
+                        <h5 class="mt-2">Secure Login Panel</h5>
+                        <p class="small mb-0">Includes user authentication and a dark/light theme switch.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="border p-2 rounded bg-light text-center">
+                    <div class="p-4 bg-dark text-white rounded shadow-sm">
+                        <i class="bi bi-speedometer2 fs-1 text-warning"></i>
+                        <h5 class="mt-2">Clinician Dashboard</h5>
+                        <p class="small mb-0">Displays metrics for admitted patients, sessions, and recovery charts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4>7.2 Feature Verification Matrix</h4>
+        <table class="table table-bordered bg-white">
+            <thead class="table-secondary">
+                <tr><th>Requirement</th><th>Design Pattern</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dynamic Sidebar Tree Navigation</td>
+                    <td>Recursive function outputting list tags based on role access.</td>
+                    <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+                <tr>
+                    <td>Access URL Guard Check</td>
+                    <td>Page context script maps to DB role permissions check.</td>
+                    <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+                <tr>
+                    <td>Custom Roles Auto Key Generation</td>
+                    <td>Role string converted to lowercase with underscores.</td>
+                    <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+                <tr>
+                    <td>Print to PDF Export Engine</td>
+                    <td>CSS print media styles and auto browser print triggers.</td>
+                    <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= CHAPTER 8 ================= -->
+    <div class="container page" id="chapter8">
+        <h2 class="section-title">Chapter 8: Conclusion & Future Work</h2>
+        
+        <h4>8.1 Conclusion & Scope</h4>
+        <p>
+            The Islamabad Rehab Center Portal successfully implements a dynamic, role-restricted management system. By avoiding hardcoded menus, roles, or configurations, the portal can adapt to changing operational workflows at the facility without requiring code modifications. This modular design approach ensures that developers can easily extend the platform as the clinic grows.
+        </p>
+
+        <h4>8.2 Lessons Learnt</h4>
+        <ul>
+            <li>Structuring database models cleanly prevents reference integrity issues during role adjustments.</li>
+            <li>Centralizing redirects via JS fallback handles headers-already-sent situations securely.</li>
+            <li>Dynamic menus reduce UI clutter, helping clinical personnel focus on their respective workflows.</li>
+            <li>Database transaction rollbacks are critical when deleting roles to prevent orphaned records if a query fails.</li>
+        </ul>
+
+        <h4>8.3 Check Objectives</h4>
+        <ul>
+            <li><strong>Objective 1:</strong> Secure clinical records? <strong>Yes.</strong> Protected by PDO statements and page access guards.</li>
+            <li><strong>Objective 2:</strong> dynamic setup? <strong>Yes.</strong> Configs, roles, page URLs, and permissions are database-driven.</li>
+            <li><strong>Objective 3:</strong> Printable reports? <strong>Yes.</strong> Integrates a browser print engine layout.</li>
+        </ul>
+
+        <h4 class="mt-4">8.4 Future Work Scopes</h4>
+        <p>
+            While the current skeleton provides a solid foundation for clinical operations, several features can be added in future iterations:
+        </p>
+        <ol>
+            <li class="mb-2"><strong>Telehealth Virtual Sessions:</strong> Integrating video conferencing libraries (e.g. Jitsi or WebRTC) directly inside the therapy log pages to support remote outpatient checkups.</li>
+            <li class="mb-2"><strong>Automated SMS Reminders:</strong> Connecting Twilio SMS gateways to send automated appointment reminders to outpatients and family members.</li>
+            <li class="mb-2"><strong>Inventory & Medicine Management:</strong> Adding medication tracking, dosage schedules, and inventory alerts to the clinical dashboard.</li>
+        </ol>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- ================= REFERENCES ================= -->
+    <div class="container page" id="references">
+        <h2 class="section-title">References</h2>
+        <ol class="list-group list-group-numbered list-group-flush">
+            <li class="list-group-item bg-transparent">
+                PHP Group (2023). <em>PHP Data Objects (PDO) Framework Manual.</em> Available online at: <a href="https://www.php.net/manual/en/book.pdo.php" target="_blank">https://www.php.net/manual/en/book.pdo.php</a>
+            </li>
+            <li class="list-group-item bg-transparent">
+                Bootstrap Authors (2024). <em>Bootstrap 5.3 Style Framework Documentation.</em> Available online at: <a href="https://getbootstrap.com/" target="_blank">https://getbootstrap.com/</a>
+            </li>
+            <li class="list-group-item bg-transparent">
+                ColorlibHQ (2024). <em>AdminLTE v4 Open-Source Admin Dashboard.</em> Available online at: <a href="https://adminlte.io/" target="_blank">https://adminlte.io/</a>
+            </li>
+            <li class="list-group-item bg-transparent">
+                Oracle Corporation (2023). <em>MySQL 8.0 Reference Manual.</em> Available online at: <a href="https://dev.mysql.com/doc/" target="_blank">https://dev.mysql.com/doc/</a>
+            </li>
+        </ol>
+    </div>
+
+    <!-- Automatically Trigger Print Dialog -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            // Trigger browser print dialog automatically after page loads
+            setTimeout(() => {
+                window.print();
+            }, 500);
+        });
+    </script>
+</body>
+</html>
