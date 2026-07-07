@@ -1,0 +1,227 @@
+/* Islamabad Rehab Center (IRC) Premium Custom Theme */
+
+/* Modern CSS Variables & Styling Tokens */
+:root {
+    --irc-primary: #FF7A00;
+    --irc-primary-hover: #E06A00;
+    --irc-primary-rgb: 255, 122, 0;
+    --irc-primary-gradient: linear-gradient(135deg, #FF8A00 0%, #FF4B00 100%);
+    --irc-secondary-gradient: linear-gradient(135deg, #2A2A2A 0%, #1A1A1A 100%);
+    --irc-shadow: 0 10px 30px rgba(255, 122, 0, 0.08);
+    --irc-shadow-lg: 0 15px 40px rgba(255, 122, 0, 0.15);
+    --irc-border-radius: 16px;
+    --irc-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base resets & typography */
+body {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, .display-4, .brand-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 122, 0, 0.12);
+    box-shadow: var(--irc-shadow);
+    border-radius: var(--irc-border-radius);
+}
+
+[data-bs-theme="dark"] .glass-panel {
+    background: rgba(30, 30, 30, 0.85);
+    border: 1px solid rgba(255, 122, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background: var(--irc-primary-gradient) !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.25);
+    transition: var(--irc-transition) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.35);
+    background: linear-gradient(135deg, #FF9B26 0%, #FF5A14 100%) !important;
+}
+
+/* Outline Button Styling */
+.btn-outline-primary {
+    color: var(--irc-primary) !important;
+    border: 2px solid var(--irc-primary) !important;
+    background: transparent !important;
+    font-weight: 500;
+    transition: var(--irc-transition) !important;
+}
+
+.btn-outline-primary:hover {
+    background: var(--irc-primary-gradient) !important;
+    border-color: transparent !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.25);
+}
+
+/* Color overrides for utilities */
+.text-primary {
+    color: var(--irc-primary) !important;
+}
+
+.bg-primary {
+    background: var(--irc-primary-gradient) !important;
+}
+
+.bg-primary-subtle {
+    background-color: rgba(255, 122, 0, 0.1) !important;
+    color: var(--irc-primary) !important;
+}
+
+/* AdminLTE & Bootstrap Header / Navbar overrides */
+.app-header.navbar {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 122, 0, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+[data-bs-theme="dark"] .app-header.navbar {
+    background: rgba(18, 18, 18, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 122, 0, 0.15) !important;
+}
+
+/* Sidebar Custom Styling */
+.app-sidebar {
+    background: var(--irc-secondary-gradient) !important;
+    border-right: 1px solid rgba(255, 122, 0, 0.1) !important;
+}
+
+.sidebar-brand {
+    border-bottom: 1px solid rgba(255, 122, 0, 0.15) !important;
+    background: rgba(0,0,0,0.15);
+}
+
+.sidebar-brand .brand-text {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+.app-sidebar .nav-link.active {
+    background: var(--irc-primary-gradient) !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3) !important;
+    font-weight: 600;
+}
+
+.app-sidebar .nav-link:hover:not(.active) {
+    background: rgba(255, 122, 0, 0.1) !important;
+    color: var(--irc-primary) !important;
+}
+
+/* Card Improvements */
+.card {
+    border-radius: var(--irc-border-radius) !important;
+    border: 1px solid rgba(255, 122, 0, 0.08) !important;
+    box-shadow: var(--irc-shadow) !important;
+    background-color: var(--bs-card-bg);
+    transition: var(--irc-transition);
+}
+
+.card:hover {
+    box-shadow: var(--irc-shadow-lg) !important;
+}
+
+.card-primary.card-outline {
+    border-top: 4px solid var(--irc-primary) !important;
+}
+
+[data-bs-theme="dark"] .card {
+    border: 1px solid rgba(255, 122, 0, 0.15) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Table Overrides */
+.table {
+    border-color: rgba(255, 122, 0, 0.08) !important;
+}
+
+[data-bs-theme="dark"] .table {
+    border-color: rgba(255, 122, 0, 0.15) !important;
+}
+
+/* Timeline/List items */
+.timeline-item {
+    border-left: 2px solid var(--irc-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Mood log styles */
+.mood-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--irc-transition);
+    border: 2px solid transparent;
+}
+
+.mood-btn:hover {
+    transform: scale(1.15);
+}
+
+.mood-btn.active {
+    border-color: var(--irc-primary);
+    box-shadow: 0 0 15px rgba(255, 122, 0, 0.4);
+}
+
+.mood-1 { background-color: #ffcccc; color: #cc0000; } /* Critical */
+.mood-2 { background-color: #ffe5cc; color: #cc6600; } /* Struggling */
+.mood-3 { background-color: #fffae6; color: #b38600; } /* Neutral */
+.mood-4 { background-color: #e6f7ff; color: #006699; } /* Good */
+.mood-5 { background-color: #e6ffe6; color: #008000; } /* Excellent */
+
+[data-bs-theme="dark"] .mood-1 { background-color: rgba(204,0,0,0.25); color: #ff9999; }
+[data-bs-theme="dark"] .mood-2 { background-color: rgba(204,102,0,0.25); color: #ffc280; }
+[data-bs-theme="dark"] .mood-3 { background-color: rgba(179,134,0,0.25); color: #ffe680; }
+[data-bs-theme="dark"] .mood-4 { background-color: rgba(0,102,153,0.25); color: #99e6ff; }
+[data-bs-theme="dark"] .mood-5 { background-color: rgba(0,128,0,0.25); color: #99ff99; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 122, 0, 0.3);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--irc-primary);
+}
